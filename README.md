@@ -6,11 +6,12 @@ This project is a React JS implementation of the **OMS (Order Management System)
 
 ## Live Demo
 
-https://your-project.vercel.app
+https://react-assignment-mocha-sigma.vercel.app/
 
 ## GitHub Repository
 
-https://github.com/yourusername/oms-order-details
+https://github.com/Shailendrayadav18/React-Assignment
+
 
 The screen includes:
 
