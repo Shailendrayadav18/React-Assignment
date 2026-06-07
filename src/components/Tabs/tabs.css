@@ -1,0 +1,65 @@
+.tabs {
+  display: flex;
+  align-items: center;
+
+  background: rgba(211, 211, 211, 0.386);
+
+  border: 1px solid #e5e7eb;
+
+  padding: 0 20px;
+
+  height: 38px;
+  margin-right: 20px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs button {
+  position: relative;
+
+  height: 38px;
+
+  padding: 0 18px;
+
+  border: none;
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.tabs button:hover {
+  color: #0d3556;
+}
+
+.tabs button.active {
+  color: #0d3556;
+  font-weight: 600;
+}
+
+.tabs button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #0d3556;
+
+  border-radius: 2px 2px 0 0;
+}

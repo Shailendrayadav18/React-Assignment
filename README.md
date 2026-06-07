@@ -1,70 +1,288 @@
-# Getting Started with Create React App
+# OMS Order Details Screen (React JS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React JS implementation of the **OMS (Order Management System) - Order Details Screen** based on the provided UI design. The objective was to replicate the given screen as closely as possible using reusable React components, clean CSS, and responsive layout principles.
 
-In the project directory, you can run:
+The screen includes:
 
-### `npm start`
+* Top Navigation Bar
+* Left Navigation Menu
+* Order Header Section
+* Order Information Sidebar
+* Timeline / Process Tracking
+* Tabs Navigation
+* Order Details Section
+* Order Breakdown Section
+* Customer Details Section
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React JS
+* JavaScript (ES6+)
+* CSS3
+* React Icons
 
-### `npm run build`
+### Libraries Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+react
+react-dom
+react-icons
+axios
+react-router-dom
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```text
+src
+│
+├── components
+│   ├── TopNavbar
+│   ├── LeftIconMenu
+│   ├── Header
+│   ├── Sidebar
+│   ├── Tabs
+│   ├── OrderDetail
+│   ├── OrderBreakdown
+│   └── CustomerDetail
+│
+├── pages
+│   └── OrderDetailsPage.jsx
+│
+├── services
+│   └── api.js
+│
+├── App.js
+└── index.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## APIs Required
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To make the screen fully functional, the following APIs are required.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Order Summary API
 
-## Learn More
+```http
+GET /api/orders/{orderId}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Purpose:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Order Number
+* Material
+* Quantity
+* Status
+* Delivery Date
+* Sales Organization
+* Plant
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Order Timeline API
 
-### Analyzing the Bundle Size
+```http
+GET /api/orders/{orderId}/timeline
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Purpose:
 
-### Making a Progressive Web App
+* Production Order
+* Sales Order
+* Stock Transfer Order
+* Date & Time
+* Current Status
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### 3. Order Details API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```http
+GET /api/orders/{orderId}/details
+```
 
-### Deployment
+Purpose:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Plant
+* Sales District
+* Distribution Channel
+* Division
+* Incoterms
+* Payment Terms
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 4. Order Breakdown API
+
+```http
+GET /api/orders/{orderId}/items
+```
+
+Purpose:
+
+* Material List
+* Requested Quantity
+* Scheduled Quantity
+* Confirmed Quantity
+* UOM
+* Status
+
+---
+
+### 5. Customer Details API
+
+```http
+GET /api/orders/{orderId}/customer
+```
+
+Purpose:
+
+* Sold To
+* Ship To
+* Billing Address
+* Shipping Address
+* Customer Reference
+
+---
+
+### 6. User Profile API
+
+```http
+GET /api/user/profile
+```
+
+Purpose:
+
+* User Name
+* Profile Image
+
+---
+
+### 7. Notifications API
+
+```http
+GET /api/notifications
+```
+
+Purpose:
+
+* Notification Count
+* Notification List
+
+---
+
+## Total APIs Required
+
+| API              | Purpose              |
+| ---------------- | -------------------- |
+| Order Summary    | Header + Sidebar     |
+| Timeline         | Process Tracking     |
+| Order Details    | Order Detail Section |
+| Order Breakdown  | Breakdown Table      |
+| Customer Details | Customer Section     |
+| User Profile     | Top Navbar           |
+| Notifications    | Top Navbar           |
+
+### Total APIs: 7
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate into the project:
+
+```bash
+cd oms-order-details
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Running Locally
+
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will run at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Production files will be generated inside:
+
+```text
+build/
+```
+
+---
+
+## Features Implemented
+
+✅ Pixel-matched UI Layout
+
+✅ Reusable React Components
+
+✅ Responsive Design
+
+✅ Sidebar Process Tracking
+
+✅ ERP-style Tables
+
+✅ Modern Navigation Bar
+
+✅ Clean Folder Structure
+
+✅ Ready for API Integration
+
+---
+
+## Future Improvements
+
+* API Integration
+* State Management using Redux Toolkit
+* Authentication
+* Dynamic Tabs
+* Dark Mode
+* Unit Testing
+* Pagination
+* Export to PDF/Excel
+
+---
+
+## Author
+
+Shailendra Yadav
+
+React JS Assignment Submission

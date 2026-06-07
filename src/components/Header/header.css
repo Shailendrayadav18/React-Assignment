@@ -1,0 +1,152 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 12px 12px;
+
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-left {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 4px;
+  margin-top: 4px;
+
+  padding-left: 6px;
+  padding-right: 6px;
+
+  white-space: nowrap;   /* important */
+  overflow: hidden;
+  
+  min-height: 28px;
+  width: fit-content;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #8a8a8a;
+  font-weight: 500;
+  white-space: nowrap;   /* important */
+  margin: 0;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-section h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+
+  color: #2c2c2c;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: #16a34a;
+
+  color: white;
+
+  padding: 4px 10px;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  height: 26px;
+}
+
+.status-icon {
+  font-size: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn,
+.nav-btn {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #d8dde6;
+  background: white;
+
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover,
+.nav-btn:hover {
+  background: #f8fafc;
+}
+
+.status-dropdown {
+  height: 34px;
+
+  min-width: 100px;
+
+  border: 1px solid #d8dde6;
+  border-radius: 4px;
+
+  padding: 0 10px;
+
+  font-size: 13px;
+}
+
+.action-btn {
+  height: 34px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #0d3556;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #082844;
+}

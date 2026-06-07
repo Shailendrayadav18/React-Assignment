@@ -1,0 +1,105 @@
+.order-breakdown {
+  background: #ffffff;
+
+  margin-top: 18px;
+  margin-right: 20px;
+  border: 1px solid #e5e7eb;
+
+  overflow: hidden;
+}
+
+/* Section Header */
+
+.order-breakdown-header {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+.table-wrapper {
+    padding: 16px;
+  overflow-x: auto;
+}
+
+.order-breakdown-header h3 {
+  margin: 0;
+
+ font-size: 16px;
+  font-weight: 700;
+
+  color: #1f2937;
+}
+
+/* Table */
+
+.breakdown-table {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+
+  border-collapse: collapse;
+}
+
+.breakdown-table thead {
+  background: #f8fafc;
+}
+
+.breakdown-table thead th {
+  padding: 12px 14px;
+
+  text-align: left;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #6b7280;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.breakdown-table tbody td {
+  padding: 12px 14px;
+
+  font-size: 13px;
+  color: #1f2937;
+  font-weight: 500;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.breakdown-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.breakdown-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Quantity Columns */
+
+.qty-column {
+  text-align: center;
+}
+
+/* Status */
+
+.status-head span{
+    background-color: #d97706;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.status-pending span{
+    color: #d97706 !important; 
+  font-weight: 600;
+    background-color: #d977061b;
+    padding: 6px;
+    border-radius: 4px;
+}
