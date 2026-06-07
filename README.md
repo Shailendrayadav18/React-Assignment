@@ -4,6 +4,14 @@
 
 This project is a React JS implementation of the **OMS (Order Management System) - Order Details Screen** based on the provided UI design. The objective was to replicate the given screen as closely as possible using reusable React components, clean CSS, and responsive layout principles.
 
+## Live Demo
+
+https://your-project.vercel.app
+
+## GitHub Repository
+
+https://github.com/yourusername/oms-order-details
+
 The screen includes:
 
 * Top Navigation Bar
